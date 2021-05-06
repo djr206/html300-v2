@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Code that requires the DOM be loaded should not be run until the DOM is loaded
+document. addEventListener("DOMContentLoaded", function(){
+
+// Find the example form, and handle its submit event
+const sec3L1form = document.querySelector('#sec3L1-form')
+
+// moved array up so it could be initialized before things start happening
+let data = [4, 42, 7, 33, 1, -925, 7.3, 87, 42]
+
+// setup the scene, this function needed to be loaded before evenfunctlisterne
+onload=function displayArr() {
+  let newItem = document.createElement("P");
+  let textnode = document.createTextNode('Given the following numbers: ' + data);
+  newItem.appendChild(textnode);
+  let s3L1form = document.getElementById("sec3L1-form");
+  s3L1form.insertBefore(newItem, s3L1form.childNodes[0]);
+}
+
+sec3L1form.addEventListener('submit', function(event){
+  // Prevent the form from trying to submit to a server
+  event.preventDefault()
+
+  // An array that we can transform based on user input
+//   let data = [4, 42, 7, 33, 1, 87, 42]
+
+  const inputField = document.querySelector('#sec3L1-form .input')
+  // need to figure out how to select different input fields
+  const userInput = inputField.value
+  const userNumber = parseInt(userInput)
+
+  // If the user's input was a number, push it into the array and continue
+  if(!isNaN(userNumber)){
+    data.push(userNumber) // works fine
+
+    // assign array element values from 2-4 to sliceArr
+    sliceArr = data.slice(2,5);
+
+    // set focus to input field
+    // inputField.focus;
+//     $(function() {
+//   $("input").focus();
+// });
+window.onload = function() {
+  document.getElementsByClassName("input").focus(); // focus isn't working yet
+
+};
+
+    // Use reduce to sum all the numbers in the data array
+    const sum = data.reduce((accumulator, currentElement) => accumulator + currentElement);
+
+// filter out duplicates
+newArr = data.reduce((x, y) => x.includes(y) ? x : [...x, y], []);
+
+console.log(newArr);
+
+    // sort() sorts by the first digit so 10 comes before 9  
+    // const order = data.sort();
+    // found solution at javascripttutorial site, using recursive function. How i understand it: sort() is called in usual flow 
+    // of the program. It is called on the data object which is the given array. It takes in two values from array and compares
+    // them but from there I'm bewildered but it's working.
+    const order = data.sort( function( a , b){ 
+    if(a > b) return 1;
+    if(a < b) return -1;
+    return 0;
+
+});
+
+// console.log(Math.min(...order));
+
+    // Output the total to the page- no need to convert the numeric sum back to a string, HTML will just print the number as a string
+    document.querySelector('#sec3L1-form .output').innerHTML = sum
+    document.querySelector('#sec3L1-form .output2').innerHTML = order
+    document.querySelector('#sec3L1-form .output3').innerHTML = Math.min(...order);
+    document.querySelector('#sec3L1-form .output4').innerHTML = Math.max(...order);
+    document.querySelector('#sec3L1-form .output5').innerHTML = sliceArr;
+    document.querySelector('#sec3L1-form .output6').innerHTML = data.reverse(...order);
+    document.querySelector('#sec3L1-form .output7').innerHTML = newArr;
+
+
+  }
+
+  // Clear the form field so the user can try again
+  inputField.value = ''
+})
+
+})
+</script>
+    <div>
+        <form action="" method="" id="sec3L1-form">
+            <input type="number" class="input" placeholder="Key a Number"> <!-- <input type="submit" value="Sum Numbers"><br> -->
+            <p>Adding your number to the set totals: <span class="output"></span></p> <!-- replace 'your number' with keyed number -->  
+
+            <!-- <input type="text" id="numFun2" class="input" name="num_fun2" placeholder="Enter 2nd Number"><input type="submit" value="Order Numbers"><br> -->
+            <p>Sorting numbers by value results in: <span class="output2"></span></p>
+
+            <!-- <input type="text" id="numFun3" class="input" name="num_fun3" placeholder="Enter 3rd Number"><br><br> -->
+            <p>The lowest number in the set is: <span class="output3"></span></p>
+
+            <!-- <input type="text" id="numFun4" class="input" name="num_fun4" placeholder="Enter 4th Number"><br><br> -->
+            <p>The highest number in the set is: <span class="output4"></span></p>
+
+            <p>The third, fourth and fifth numbers of the set are: <span class="output5"></span></p>
+
+            <p>To reverse the array order we use the reverse method: <span class="output6"></span></p>
+
+            <!-- added 7th to help me understand how these work, still bewildered... -->
+            <p>To remove duplicates employ the includes method inside a reduce method: <span class="output7"></span></p><br> 
+
+
+            <input type="submit" value="Calculate">
+        </form>    
+    </div>    
+        
+</body>
+</html>
