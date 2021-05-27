@@ -16,9 +16,15 @@ h1 {
     color: $red;  
 }
 
+.top-or-left {
+    display: flex;
+    flex-direction: column;
+}
+
+// scss below here is working with the vertical card orientation
 .profile-card-container {
-    height: 40rem;
-    width: auto;
+    height: auto;
+    max-width: 25rem;
     position: relative;
     background-color: $bkgrdclr;
     overflow: hidden;
@@ -76,3 +82,14 @@ p,a {
 .social-details{
     padding-top: .5rem;
 }
+
+    // horizontal orientation starts here    
+// @media screen and (min-width: 600px) {
+//     .profile-card-container {
+//         max-width: 40rem;
+//         flex-direction: row;
+//         padding: 2rem;
+//     }
+// }
+    
+// $horzCard;
