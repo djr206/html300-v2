@@ -13,7 +13,7 @@ html {
 }
 
 h1 {
-    color: $red;  
+    color: $purple;  
 }
 
 p {
@@ -32,7 +32,7 @@ p {
     height: auto;
     max-width: 25rem;
     position: relative;
-    background-color: $bkgrdclr;
+    background-color: $red;
     overflow: hidden;
     box-shadow: 0 0 10px gray; // $gray doesn't work
     border-radius: 10px;

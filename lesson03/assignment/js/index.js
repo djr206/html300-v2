@@ -114,7 +114,70 @@ document.getElementById("template-hook").innerHTML = `
 <h1>JSON array of (${dogPeople.length}) items, branch sec3l03</h1>
    ${dogPeople.map(DogPeopleTemplate).join('')}
 `
+// document.body.innerHTML = `
+//   ${dogPeople.map(DogPeopleTemplate).join('')};
+// `
 
+///////////////
+//    class create
+//    class DogPeopleClass {
+//      constructor(name, jobTitle, company, experience, school, major, email, linkedInUrl) {
+//        this.name = name;
+//        this.jobTitle = jobTitle;
+//        this.company = company;
+//        this.experience = experience;
+//        this.school = school;
+//        this.major = major;
+//        this.email = email;
+//        this.linkedInUrl = linkedInUrl;
+//      }
+//    }
+
+
+  // dogMarkup = `
+  //   <main class="wrapper">
+  //   <div class="profile-card-container">
+  //       <div class="top-or-left">
+  //           <section class="profile-card-container__card-img-area">
+  //               <img src="./img/headshot.jpg" alt="itzadog">
+  //           </section>
+  //           <section class="profile-card-container__card-name-area">
+  //               <h3>${dogPerson.name}</h3>
+  //           </section>
+  //           <section class="profile-card-container__card-title-area">
+  //               ${dogPerson.jobTitle}
+  //           </section>    
+  //       </div>
+  //       <section class="card-details-area">
+  //           <div class="employer-details">
+  //               <h4>company:</h4>
+  //               <p>${dogPerson.company}</p>
+  //           </div>
+  //           <div class="employment-details">
+  //               <h4>experience:</h4>
+  //               <p>${dogPerson.experience}</p>
+  //           </div>
+  //           <div class="institution-details">
+  //               <h4>school:</h4>
+  //               <p>${dogPerson.school}</p>
+  //           </div>
+  //           <div class="education-details">
+  //               <h4>major:</h4>
+  //               <p>${dogPerson.major}</p>
+  //           </div>
+  //           <div class="email-details">
+  //               <h4>email:</h4>
+  //               <a href="#"><i>  dogo@example.com</i></a>
+  //           </div>
+  //           <div class="social-details">
+  //               <a href="#"><i class="fab fa-linkedin" style="color: blue">  dogo.linkedinprofile.com</i></a>
+  //           </div>
+  //       </section>
+  //   </div>    
+  // </main>
+  // `;
+
+  // document.body.innerHTML = dogMarkup;
 
 ////////////////////////    
 ///////////////

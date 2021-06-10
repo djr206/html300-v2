@@ -109,14 +109,12 @@ function DogPeopleTemplate(dogPerson) {
 }
 
 // find insetion point
-// build html and insert array data 
+// build html and insert array data using map() traversal
 document.getElementById("template-hook").innerHTML = `
-<h1>JSON array of (${dogPeople.length}) items, branch sec3l03</h1>
+<h3>JSON array of (${dogPeople.length}) items, branch sec3l03</h3>
    ${dogPeople.map(DogPeopleTemplate).join('')}
 `
 
-
-////////////////////////    
 ///////////////
   //  save this as bkup, making mods above 
 //   class DogPeopleClass {
@@ -132,9 +130,9 @@ document.getElementById("template-hook").innerHTML = `
 //     }
 //   }
 
-//   // create single dog element passing in array to the DogPeopleClass
+//   // create single dog element passing dogPeople array into the DogPeopleClass
 //  const dogPerson = new DogPeopleClass(dogPeople);
- 
+//  console.log(dogPerson);
 
 //  dogMarkup = `
 //    <main class="wrapper">
@@ -180,6 +178,11 @@ document.getElementById("template-hook").innerHTML = `
 //  `;
 
 //  document.body.innerHTML = dogMarkup;
+// document.getElementById("template-hook").innerHTML = dogMarkup;
+// `
+// <h3>JSON array of (${dogPeople.length}) items, branch sec3l03</h3>
+//    ${dogPeople.map(DogPeopleTemplate).join('')}
+// `
 
 // getting this to render in browser w dogMarkup variable to html, not neeeded 
   // since able to pass dogPeople array into DogPeopleClass but only getting array[0]
@@ -193,13 +196,4 @@ document.getElementById("template-hook").innerHTML = `
   //    email: 'j@example.com',
   //    linkedInUrl: 'joe.linkedinprofile.com'
   //  }  
-
-
-  ///////////////
-   // see sitepoint.com/loop-through-json...
-   // use Object.entries to iterate over js object
-  //  Object.entries(dogPeople).forEach((dogPerson) => {
-  //   const [key, value] = dogPerson;
-  //   console.log(`${key}: ${value}`);
-  // });
 
