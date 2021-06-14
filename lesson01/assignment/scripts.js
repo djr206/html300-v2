@@ -1,7 +1,7 @@
 // Code that requires the DOM be loaded should not be run until the DOM is loaded
 document. addEventListener("DOMContentLoaded", function(){
 
-  // Find the example form, and handle its submit event
+  // Find the form, and handle its submit event
   const exampleForm = document.querySelector('#example-form')
   const sec3L1aform = document.querySelector('#sec3L1a-form')
   const sec3L1bform = document.querySelector('#sec3L1b-form')
@@ -136,29 +136,26 @@ document. addEventListener("DOMContentLoaded", function(){
   const inputField = document.querySelector('#sec3L1d-form .input')
   const userInput = inputField.value
   const userNumber = parseInt(userInput)
+  const multiData = [];
 
     // If the user's input was a number, push it into the array and continue
     if(!isNaN(userNumber)){
       // data.push(userNumber)
-     console.log(userNumber)
-      // map method iterates over my array and multiplys each element
-      // by the users number
-      const multiData = [];
-  
+
+    // map method iterates over my array and multiplys each element
+      // by the users number  
      for (let i = 0, max = data.length; i < max; i += 1) {
-  multiData.push(data[i] * userNumber);
+    multiData.push(data[i] * userNumber);
 
    // Output the multiplied array to the page 
    document.querySelector('#sec3L1d-form .output').innerHTML = multiData
-
   }
-
-  
-}
   console.log(multiData);
-     
+}
+alert('I can get the result to log and alert but not display in html. ' + multiData);
+      // Clear the form field so the user can play again
+      inputField.value = ''
     }) // closing map method 
-
 }) // closing document. addEventListener("DOMContentLoaded", function() 
 
 

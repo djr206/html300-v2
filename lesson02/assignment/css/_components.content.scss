@@ -16,6 +16,7 @@ h1 {
     color: $red;  
 }
 
+<<<<<<< HEAD
 
 $horiz-bkgrnd: #01c1d6; 
 // horizontal orientation starts here    
@@ -34,3 +35,82 @@ $horiz-bkgrnd: #01c1d6;
         }
     }
     
+=======
+.top-or-left {
+    display: flex;
+    flex-direction: column;
+}
+
+// scss below here is working with the vertical card orientation
+.profile-card-container {
+    height: auto;
+    max-width: 25rem;
+    position: relative;
+    background-color: $bkgrdclr;
+    overflow: hidden;
+    box-shadow: 0 0 10px gray; // $gray doesn't work
+    border-radius: 10px;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2.5rem solid gray;
+}
+
+.profile-card-container {
+    &__card-img-area img {
+        width: 10rem;
+        border-radius: 50%;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+    }
+    &__card-name-area {
+        margin-bottom: .5rem;
+    }
+    &__card-name-area h3 {
+        margin: 0;
+    }
+    &__card-title-area {
+        font-size: small;
+    }
+}
+
+
+h4 {
+    margin-bottom: 0;
+    margin-top: .5rem;
+}
+
+h4::first-letter {
+    text-transform: uppercase;
+}
+
+p,a {
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    font-size: small;
+}
+
+.card-details-area {
+    background-color: #DFE7F1;
+    width: 12rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    margin: .5rem auto;
+}
+
+.social-details{
+    padding-top: .5rem;
+}
+
+    // horizontal orientation starts here    
+// @media screen and (min-width: 600px) {
+//     .profile-card-container {
+//         max-width: 40rem;
+//         flex-direction: row;
+//         padding: 2rem;
+//     }
+// }
+    
+// $horzCard;
+>>>>>>> 9698d14c49b3f07aa16ed739a33c447ff9f7c9a6
