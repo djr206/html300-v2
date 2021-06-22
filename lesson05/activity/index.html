@@ -4,12 +4,241 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css" />
-        <title>Lesson05 - Flexbox Activity</title>
-    </head>
-    <body>
-        <main class="main">
-            
-        </main>
-    </body>
+        <title>Sec3Lesson05 - Flexbox Activity</title>
+
+<!-- <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  grid-area: header;
+  background-color: red;
+  padding: 30px;
+  text-align: center;
+  font-size: 25px;
+}
+.navbar {
+  grid-area: navbar;
+  background-color: lime;
+  padding: 30px;
+  text-align: center;
+  font-size: 15px;
+}
+.navbar__list {
+    text-decoration: none;
+}
+/* a {
+    text-decoration: none;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'navbar navbar navbar navbar navbar navbar'
+    'sidebar sidebar main-content main-content main-content main-content' 
+    'footer footer footer footer footer footer';
+    margin: 2rem;
+    color: white;
+     grid-gap: 1px;
+} 
+
+.sidebar,
+.main-content {
+  padding: 10px;
+  height: 300px;
+   /* Should be removed. Only for demonstration */
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: purple;
+}
+
+.main-content {
+  grid-area: main-content;
+  text-align: center;
+  background-color: orange;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: blue;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'navbar navbar navbar navbar navbar navbar'
+      'main-content main-content main-content main-content main-content main-content' 
+      'sidebar sidebar sidebar sidebar sidebar sidebar' 
+      'footer footer footer footer footer footer';
+  }
+}
+
+</style> -->
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="header">
+    <h2>Header</h2>
+  </div>
+  <div class="navbar">
+      <ul class="navbar__list">
+        <li class="navbar__navitem">
+            <a href="#" class="navbar__link">Nav Item</a>
+        </li>
+        <li class="navbar__item">
+            <a href="#" class="navbar__link">Nav Item</a>
+        </li>
+        <li class="navbar__item">
+            <a href="#" class="navbar__link">Nav Item</a>
+        </li>
+        <li class="navbar__item">
+            <a href="#" class="navbar__link">Nav Item</a>
+        </li>
+        <li class="navbar__item">
+            <a href="#" class="navbar__link">Nav Item</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <div>
+        <ul class="navbar">
+            <li class="navitem">
+                <a href="#">Contact</a>
+            </li>
+            <li class="navitem"> 
+                <a href="#">About</a>
+            </li>
+            <li class="navitem">
+                <a href="#">Team</a>
+            </li>
+            <li class="navitem">
+                <a href="#">Store</a>
+            </li>
+        </ul>
+    </div> -->
+
+  <div class="sidebar">Sidebar Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minus voluptatum dicta, libero repellendus voluptate quas quia quo esse saepe ut ex aperiam consectetur perspiciatis at eaque nemo atque vel veritatis incidunt. Aliquid aliquam eos possimus quo explicabo veniam quod sequi cum, tempora illo fugit beatae debitis unde deleniti blanditiis accusantium magnam! Velit vero numquam et odio quam, cum vel odit enim dignissimos libero aliquid nam ad repellendus consequatur molestias impedit iste optio sunt, excepturi magni? Dignissimos ea nemo saepe laudantium voluptates, similique quam nam inventore voluptatum, labore id illum asperiores. Voluptates autem praesentium molestias sed quisquam, iusto amet omnis, necessitatibus aspernatur deleniti culpa maxime perferendis commodi voluptas minima perspiciatis veniam. Natus a quaerat quia voluptatibus minima consequuntur in praesentium sequi consectetur, maxime inventore reiciendis!</div>
+  <div class="main-content">Main Content Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias explicabo totam minima voluptatibus autem similique facilis neque magni, molestias illo quo fugit dolorem assumenda quae quaerat recusandae veniam, sapiente ducimus? Fugit ut, ipsum iure fuga repudiandae, veniam aspernatur quibusdam non ad atque nam a libero cupiditate magnam quo asperiores similique ipsam, provident excepturi. Cupiditate esse similique aperiam necessitatibus, labore deleniti ipsam, omnis ipsum consectetur nostrum, quas ad? Excepturi tempora expedita laboriosam sed eaque officiis optio quibusdam, tempore ducimus. Explicabo eius quam expedita rem quibusdam sit assumenda reprehenderit ut modi deserunt dolor, totam perferendis corrupti, obcaecati unde iste quas animi sed dolorum eligendi odio! Iusto fugit, ab illum inventore suscipit consequatur necessitatibus et! Dolor reiciendis blanditiis officiis et quos aliquam nam ipsum, corrupti dolorem harum nemo numquam quod optio sed provident aperiam corporis quis laborum adipisci esse, quia recusandae ullam doloremque enim! Adipisci blanditiis laborum architecto fugiat corporis ab animi explicabo veniam. Accusamus ab quo nemo veniam rerum, illum facere voluptatibus hic in ipsa? Aliquam laboriosam, commodi rerum suscipit natus magni? Est sunt officiis, accusamus laboriosam dolorem harum culpa minus quod! Autem saepe exercitationem molestias esse et dolor! Voluptates qui ducimus tempore dicta distinctio, laborum numquam nostrum dolore, veritatis ad autem!</div>  
+
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+</div>
+
+</body>
 </html>
+
+        <!-- w3 schools grid -->
+<!-- <style>
+.item1 { grid-area: header; }
+.item2 { grid-area: navbar; }
+.item3 { grid-area: main; }
+.item4 { grid-area: sidebar; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'header header header header header header'
+    'navbar navbar navbar navbar navbar navbar'
+    'sidebar sidebar main main main main'
+    'sidebar sidebar main main main main'
+    'sidebar sidebar main main main main'
+    'sidebar sidebar main main main main'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  margin: 5em;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>Grid Layout</h1>
+
+<p>This grid layout contains six columns and three rows:</p>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">Navbar</div>
+  <div class="item3">Main</div>  
+  <div class="item4">Sidebar</div>
+  <div class="item5">Footer</div>
+</div>
+
+</body>
+</html> -->
+
+        <!-- // sec3L5V2 flexbox nav exercise -->
+
+        <!-- <main class="main">
+            <div class="nav-wrap">
+                <nav class="nav">
+                    <a href="" class="nav__logo">MySiteInc</a>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Team</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Store</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="nav__login">Log In</a>
+                </nav>
+            </div>            
+        </main> -->
+        <!-- <div class="container">
+            <div class="sun sun-logo">
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="moon moon-logo">
+                <i class="fa fa-car"></i>
+            </div>
+        </div> -->
+<!-- <script>
+    document.querySelector(".container").addEventListener("click", () => {
+        document.querySelector(".sun-logo").classList.toggle("animate-sun");
+        document.querySelector(".moon-logo").classList.toggle("animate-moon");
+        document.querySelector("body").classList.toggle("dark");
+    })
+</script>       -->
+
+<!-- <div class="layout">
+    <article class="article-authors">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, sed earum? Tempora, sunt officiis! Molestiae vero ipsam consequuntur repudiandae nulla omnis, ea, esse laudantium maxime fugit porro id at! Dolorum ipsum mollitia et suscipit. Sequi, temporibus ut nostrum laborum rem rerum blanditiis neque dolorum totam voluptatibus obcaecati quisquam dolorem eligendi porro ipsam. Deleniti in aliquid dolor voluptate molestias corporis eaque provident consequuntur quisquam ipsa soluta commodi laudantium a veritatis quam unde, voluptatem fuga voluptatibus maxime rem exercitationem assumenda consectetur quaerat fugit? Laborum ullam voluptatem eveniet sed repellat quia exercitationem odit totam autem hic dignissimos optio inventore ipsa dolorem explicabo accusantium labore maiores error temporibus, alias voluptatum repudiandae odio. Veritatis, qui, similique voluptas accusantium ipsam illo asperiores fugit pariatur harum consequatur recusandae quos veniam rem, tempora accusamus. Nisi vitae dolor provident possimus eum non nulla similique debitis dolores voluptate, delectus itaque, quae excepturi velit necessitatibus eaque dolorem, ab rem natus a? Commodi a blanditiis at, voluptate vel voluptas laboriosam quasi? Dolore aliquam vero, exercitationem fuga molestias, magni aut incidunt ut, sunt porro officia ipsa reprehenderit alias. Voluptatum nihil culpa, dolor animi, officiis sequi dicta quas quasi eveniet, sint dolorem reprehenderit excepturi. Similique illo dolor quas repellendus provident quo possimus. Neque, magni?
+    </article>
+    <article class="related-article">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore libero debitis amet quod nisi officia cupiditate, voluptates quaerat laborum iusto eius praesentium ea repudiandae harum ratione incidunt dolorem explicabo quis nulla dolor expedita aperiam animi excepturi! Similique, totam error quo dolorem maiores suscipit repellat, nemo voluptas et laborum placeat atque amet quaerat fugit eum delectus velit ex. Alias fugit eos facere ex? Obcaecati deleniti deserunt exercitationem! Voluptates, maxime praesentium? Totam voluptatum pariatur neque sed cum sapiente quaerat maxime? Maiores itaque vitae excepturi veniam delectus officia aliquam distinctio doloremque corporis aperiam animi quo, debitis quod voluptatibus. Dolorum obcaecati similique molestiae necessitatibus.
+    </article>
+
+</div> -->
+    <!-- </body> -->
+<!-- </html> -->

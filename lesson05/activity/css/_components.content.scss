@@ -8,6 +8,240 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
-}
+body {    
+    font-family: $font-fam;
+
+  }
+
+// from grid exercise
+.header {
+    grid-area: header;
+    background-color: $red;
+    padding: 2em;
+    text-align: center;
+    font-size: 25px;
+  }
+  .navbar {
+    grid-area: navbar;
+    display: flex;
+    background-color: $lime;
+    padding: 0 25em;
+    margin: 0;
+  }
+  .navitem {
+      padding: 20px;
+      list-style-type: none;
+  }
+  a {
+      text-decoration: none;
+  }
+  
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'navbar navbar navbar navbar navbar navbar'
+      'sidebar sidebar main-content main-content main-content main-content' 
+      'footer footer footer footer footer footer';
+    margin: 2em;
+    color: $white;
+    grid-gap: 1px;
+    max-width: 100vh;
+} 
+  
+  .sidebar,
+  .main-content,
+  .footer {
+    padding: 3em;
+    text-align: center;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: $orange;
+  }
+  
+  .main-content {
+    grid-area: main-content;
+    background-color: $purple;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: $blue;
+    padding: 1em;
+  }
+  
+  @media (max-width: 650px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'navbar navbar navbar navbar navbar navbar'
+        'main-content main-content main-content main-content main-content main-content' 
+        'sidebar sidebar sidebar sidebar sidebar sidebar' 
+        'footer footer footer footer footer footer';
+    }
+  }
+  
+ // sec3L5V2 flexbox nav exercise
+ // changed class .nav to .navbar
+// .navbar {
+//     background: $teal;
+//     // display: flex;
+//     // justify-content: space-between;
+//     // align-items: center;
+//     padding: 2rem 1rem;
+//     // flex-wrap: wrap;
+//     // flex: 1 1 auto;
+//     // &-wrap {
+//         // max-width: 1366px;
+//     }
+//     // &__logo,
+//     // &__login {
+//     //     font-size: 28px;
+//     //     color: $white;
+//     //     font-family: $font-fam;
+//     //     text-decoration: none;
+//     //     margin: 0 auto 2rem;
+//     //     width: 100%;
+//     //     // text-align: center;
+//     //     @include media-query(tab) {
+//     //         margin: 0;
+//     //         width: auto;
+//     //     }
+//     // }
+//     // & login {
+//     //     margin: 2rem auto 0;
+//     //     @include media-query(tab) {
+//     //         margin: 0;
+//     //     }
+//     // }
+//     &__list {
+//         padding: 0;
+//         margin: 0 auto;
+//         list-style: none;
+//         text-align: center;
+//     }
+//     &__item {
+//         // display: inline-block;
+//         font-size: 20px;
+//         font-family: $font-fam;
+//         margin-right: 2rem;
+//         &:last-of-type {
+//             margin: 0;
+//         }
+//     }
+//     &__link {
+//         color: $white;
+//     }
+// }
+
+
+// from dev.to 'Dark mode toggle animation using CSS'
+// .container {
+//     // position: relative;
+//     // background: $teal;
+//     display: flex;
+//     // justify-content: space-between;
+//     // align-items: center;
+//     padding: 2rem 1rem;
+//     // flex-wrap: wrap;
+//     // flex: 1 1 auto;
+// }
+
+// .sun, .moon {
+//     font-size: 10rem;
+//     width: fit-content;
+//     height: fit-content;
+// }
+
+// .moon {
+//     position: absolute;
+//     inset: 0;
+// }
+
+// .moon-logo {
+//     opacity: 0;
+//     transform: translateY(20%) rotateZ(50deg);
+// }
+
+// .sun-logo {
+//     opacity: 1;
+//     transform: translateY(0) rotateZ(0deg);
+//     color: rgb(212, 101, 10);
+// }
+
+// .animate-sun {
+//     opacity: 0;
+//     transform: translateY(20%) rotateZ(100deg);
+//     color: aliceblue;
+// }
+
+// .animate-moon {
+//     opacity: 1;
+//     transform: translateY(0%) rotateZ(0deg);
+//     color: aliceblue;
+// }
+
+// .moon-logo {
+//     opacity: 0;
+//     transform: translateY(20%) rotateZ(50deg);
+//     transition: all 2s ease-out;
+// }
+
+// .sun-logo {
+//     opacity: 1;
+//     transform: translateY(0) rotateZ(0deg);
+//     transition: all 2s ease-out;
+// }
+
+// body {
+//     transition: background-color 2s;
+// }
+
+// .dark {
+//     background-color: black;
+// }
+
+// // taken from s3L5v1 CSS grid review
+
+// .article-authors {
+//     display: grid;
+//     max-width: 1040px;
+//     margin: auto;
+//     align-items: center;
+//     grid-template-columns: 200px 1fr;
+//     grid-template-rows: 1fr;
+//     gap: 1rem;
+// }
+
+// .related-article {
+//     display: grid;
+//     max-width: 500px;
+//     margin: auto 2rem;
+//     grid-template-areas: 
+//         'img'
+//         'copy';
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 1fr;
+//     gap: 1rem;
+//     @include media-query(lg) {
+//         grid-template-areas: 'img copy';
+//         grid-template-columns: 1fr 2fr;
+//         margin: auto;
+//     }
+// }
+
+// .layout {
+//     grid-template-areas: 'header header'
+//                             'nav main'
+//                             'nav footer';
+// }
+
+// .head {
+//     grid-area: header;
+// }
+
+// .nav {
+//     grid-area: nav;
+// }
