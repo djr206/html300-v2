@@ -8,6 +8,81 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+body {
+    font-family: $font-fam;
+}
+  
+.header {
+    grid-area: header;
+    text-align: center;
+    font-size: 1em;
+    background-color: $red;
+    padding: 2em;
+}
+
+.navbar {
+    grid-area: navbar;
+    text-align: center;
+    font-size: 1em;
+    background-color: $lime;
+}
+
+.navbar__list {
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0; // navbar was not centering until adding this
+}
+
+a {
+    text-decoration: none;
+    padding: 2em;
+    color: $white;
+}
+  
+// setup the layout of the grid when >625px
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'navbar navbar navbar navbar navbar navbar'
+      'sidebar sidebar main-content main-content main-content main-content' 
+      'footer footer footer footer footer footer';
+    margin: 1em;
+    grid-gap: 1px;
+    color: $white;
+} 
+  
+.sidebar,
+.main-content,
+.footer {
+    padding: 2em;
+}  
+ 
+.sidebar {
+    grid-area: sidebar;
+    background-color: $purple;
+}
+  
+.main-content {
+    grid-area: main-content;
+    background-color: $orange;
+}
+  
+.footer {
+    grid-area: footer;
+    background-color: $blue;
+    text-align: center;
+}
+  
+// modify grid layout when going to smaller screen
+@media (max-width: 625px) {
+    .grid-container  {
+        grid-template-areas: 
+        'header header header header header header' 
+        'navbar navbar navbar navbar navbar navbar'
+        'main-content main-content main-content main-content main-content main-content' 
+        'sidebar sidebar sidebar sidebar sidebar sidebar' 
+        'footer footer footer footer footer footer';
+    }
 }
