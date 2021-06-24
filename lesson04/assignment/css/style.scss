@@ -1,0 +1,98 @@
+// declare two different spinner styles
+$spin1: 10em, 10em, #52c052;
+$spin2: 20em, 20em, black;
+// apply to create round elements
+$radius50: 50%;
+// apply for element movement/spin
+$bigspin: translate(200px, 0px) rotate(3600deg);
+
+
+// changes in mixin take effect where ever it's @included
+  // transform: translate(200px, 0px) rotate(3600deg);
+  // use variable bigspin instead of translate, clean up later
+//   @mixin spinit {
+//   transform: $bigspin;
+//   background-color: red;
+//   width: 110px;
+//   height: 110px;
+// }
+
+// refactor spinit to use variables
+@mixin spinit1($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+  transform: $bigspin;
+}
+
+// mixin default setting
+@mixin spindefa($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+}
+// course content vid w/Aaron
+// transition: <property> <duration> <timing-function> <delay>;
+body{
+    padding: 50px;
+    .trigger{
+      .box{
+        display: inline-block;
+        // send commented properties to mixins
+        // background: green;
+        // width: 100px;
+        // height: 100px;
+        // transition-property: background-color;
+        // transition-duration: 2300ms;
+        @include spindefa(100px, 100px, blue);
+        transition: width 2s, height 2s, background-color 2s, transform 2s ease;
+        border-radius: $radius50;
+        .img{
+            border-radius: $radius50;
+            padding: 1em;
+        }
+      }
+    }
+
+    // modify translate so element moves back and forth along the X axis
+    // add @include to call the spinit mixin
+    .trigger:hover .box{
+      @include spinit1($spin1...);
+      // @include spinit;
+        // transform: translate(200px, 0px) rotate(3600deg);
+        // background-color: orangered;
+        // width: 110px;
+        // height: 110px;
+      }
+
+      .trigger:hover .box1{
+        @include spinit1($spin2...);
+        }    
+  }
+
+
+
+// resources 
+// https://www.codegrepper.com/code-examples/css/css+keyframes+transform+rotate      
+// https://codepen.io/marknotton/pen/VamaqN
+
+// super instructive page(for me anyhow) https://www.learnhowtoprogram.com/user-interfaces/movement-interactivity-frameworks/animations-and-movement-in-sass
+// related https://dribbble.com/shots/2772796-Download-Process-Animation
+// https://www.aleksandrhovhannisyan.com/blog/sass-multiple-transitions-mixin/
+
+// @mixin transition($props...) {
+//     $result: ();
+
+//     @for $i from 1 through length($props) {
+//       $prop: nth($props, $i);
+//       $result: append($result, $prop);
+//       $result: append($result, ease 0.2s);
+
+//       @if $i != length($props) {
+//         $result: append($result, unquote($string: ","));
+//       }
+//     }
+
+//     transition: $result;
+// }
+
