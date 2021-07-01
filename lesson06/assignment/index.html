@@ -5,170 +5,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
     <!-- Bootstrap CSS, make sure this comes before other stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>sec3L6assignment - Bootstrap 4</title>
 </head>
-    <body>
-        <header class="container-inline">
-        <h1 class="jumbotron text-center">Sec3L6 Assignment: Bootstrap website landing page</h1>
-        </header>
-        <!-- <nav class="navbar">
-            <ul>
-                <li>1st link</li>
-                <li>2nd link</li>
-                <li>3rd link</li>
-                <li>4th link</li>
-            </ul>
-        </nav> -->
+<body>
+    <!-- remember to include accessibility link for text readers -->
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+    <!-- wrap w container for standard alignment of all children -->
+    <header class="container">
+        <h1 class="jumbotron text-center">Sec3L6 Assignment: Bootstrap website Landing page</h1>
+          <!-- need to code .active so link indicates active page ??? -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">
+                <i class="fa fa-bullseye fa-5x" width="20" height="20" style="color:red" alt=""></i>
+            </a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
-          
+        
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Landing Page <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="images-page.html">Images Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="accordion-page.html">Accordion Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grid-page.html">Grid Page</a>
+                    </li>
+                </ul>
             </div>
-          </nav>
-
+        </nav>
+    </header>
+        <br>
+    <div class="container-sm p-5 my-2">
+                <!-- setup two col grid for landing page content, main col 3x size of sidebar col -->
+        <div class="row">
+            <div class="col-sm-9 bg-warning">
+                <h1 id="content" class="display-3">Main Content</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempora aliquid asperiores cum impedit illum atque aut odit inventore necessitatibus debitis neque corporis totam aspernatur minus similique sunt qui quam maiores ipsum, architecto possimus. Hic quos impedit omnis iste ex earum labore consequatur, recusandae quae optio itaque blanditiis cupiditate nisi soluta tempora veritatis corporis assumenda facilis. Mollitia perspiciatis fugit debitis sed similique temporibus, iste voluptatem placeat aspernatur magnam vel impedit modi inventore suscipit eveniet. Praesentium reprehenderit distinctio unde vero eligendi deserunt corrupti repellat non perferendis, tempore velit, esse aut voluptas illum quos eveniet. Impedit, itaque magnam quisquam optio, quis dolore iure totam deleniti tenetur voluptates neque, eveniet omnis ad! Veritatis id suscipit sunt quas dolorem impedit recusandae dolores adipisci? Earum, dolor harum? Voluptates debitis, pariatur sequi exercitationem quibusdam omnis voluptate odit fugit labore? Voluptatem quam in nulla ducimus, saepe rerum esse nisi aliquam voluptatibus doloremque veniam consectetur exercitationem vel earum illo quia laboriosam totam nesciunt repellat voluptatum omnis, voluptas optio, vero laudantium? Minima illo quam vel voluptatum maxime atque non tenetur expedita officiis asperiores amet fugit deserunt possimus dicta ab sint unde, a sit accusamus quibusdam exercitationem temporibus saepe rem. Quo rerum soluta molestias dolorem optio eaque nihil, similique veniam.</p>
+            </div>
+            <br>
+            <div class="col-sm-3 bg-info">
+                <h2 class="display-5 mt-5">Sidebar Content</h2>
+                <blockquote class="blockquote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aspernatur dolorem minus facere tenetur deleniti quo repellat molestiae nihil consequuntur aliquid enim sit laudantium, nulla possimus laborum odit expedita inventore autem veritatis in. Ipsam ducimus voluptas corrupti incidunt dolorem velit!</p>
+                <footer class="blockquote-footer">quoted content source</footer>
+                </blockquote>
+            </div>
+        </div>  
+    </div>
+        <br>
         <div class="container">
-        <h1 class="jumbotron text-center">Sec3L6 Assignment: Four page Bootstrap website</h1>
+            <h1 class="jumbotron text-center">Sec3L6 Assignment: Four page Bootstrap website footer</h1>
         <div>
-            <form>
-                <div class="form-group">
-                    <button id="button1" data-toggle="tooltip" title="You must first click the 'Click Me!' button." 
-                    type="submit" class="btn btn-outline-primary" disabled>Submit</button>
-                    <button id="button2" type="button" class="btn btn-primary">Click Me!</button>    
-                </div>
-            </form>               
-        </div>
-
-    </div>
     <br>
     <br>
-        <!-- <div>above my mods, below default demo</div> -->
-        <!-- <form>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input class="form-control" type="text" id="name" placeholder="Enter name">
-                <button type="submit" class="btn btn-primary btn-block">Submit</button>
-            </div>    
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input class="form-control" type="text" id="name" placeholder="Enter name">
-                <button type="submit" class="btn btn-primary btn-block">Click Me!</button>    
-            </div>
-        </form>
-<div class="btn-group">
-    <button>Test</button>
-    <button>Primary</button>
-    <button class="btn btn-success">Primary</button>
-    <button class="btn btn-primary btn-lg">Primary</button>
-    <button class="btn btn-primary btn-sm">Primary</button>
-    <button class="btn btn-outline-primary">Primary</button>     
-</div>    
-
-
-<div class="btn-group-vertical">
-            <button class="btn btn-primary m-2">Left</button>
-            <button class="btn btn-danger m-2">Middle</button>
-            <button class="btn btn-warning m-2">Right</button>
-</div>
-<form>
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input class="form-control" type="text" id="name" placeholder="Enter name">
-    <button type="submit" class="btn btn-primary btn-block">Submit</button>
-  </div>
-</form>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-
-<div class="alert alert-success alert-dismissible">​
-  <button type="button" class="close" data-dismiss="alert">
-    <span>&times;</span>
-  </button>
-  <strong>Dismissable</strong> Blog post added
-</div>
-
-<div class="card">​
-  <div class="card-header">My Card Header</div>
-    <div class="card-body text-center">
-      <h4 class="card-title ">Card Title Goes Hers</h4>
-      <p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing.</p>
-      <a class="btn btn-success" href="#">Read More Online</a>
-    </div>
-  <div class="card-footer text-danger">This is a card footers</div>
-  <br>
-  <div class="card-header">My Card Header</div>
-    <div class="card-body text-center">
-      <h4 class="card-title ">Card Title Goes Hers</h4>
-      <p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing.</p>
-      <a class="btn btn-success" href="#">Read More Online</a>
-    </div>
-  <div class="card-footer text-danger">This is a card footers</div>
-</div> -->
 <!-- <script>
     $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();   
