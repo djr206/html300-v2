@@ -3,6 +3,7 @@
 We will converting the previous jQuery form to a Vue one using Vue CLI.
 
 ### Bootstrap/Vue References
+<!-- seems outdated, i tried following steps and errored, removed bs imports and fine ??? -->
 - [Adding Bootstrap to Vue CLI](https://travishorn.com/adding-bootstrap-to-a-vue-cli-project-98c2a30e0ed0)
 - [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
 - [Bootstrap Docs](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
@@ -23,7 +24,7 @@ We will converting the previous jQuery form to a Vue one using Vue CLI.
 	- 	If installed correctly, running `vue --version` should return a number
 
 -	To create your project using Vue CLI v2,
-	-	run `vue init webpack my-title`
+	-	run `vue init webpack my-title`vue
 	-	Follow the prompts:
 		-	Choose 1st option for Vue build (Runtime + Compiler)
 		-	Enter `n` for the router prompt
