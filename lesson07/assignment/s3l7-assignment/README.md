@@ -1,4 +1,4 @@
-# s3l7-assignment
+# l7-act2
 
 ## Project setup
 ```

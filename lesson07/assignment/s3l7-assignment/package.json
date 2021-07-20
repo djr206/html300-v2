@@ -1,5 +1,5 @@
 {
-  "name": "s3l7-assignment",
+  "name": "l7-act2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,19 +11,20 @@
     "bootstrap": "^5.0.2",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
-    "popper.js": "^1.16.1",
-    "vue": "^3.1.5"
+    "vue": "^2.6.14",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "^4.5.13",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0",
-    "sass": "^1.35.2",
-    "sass-loader": "^12.1.0"
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-cli-plugin-store": "0.0.7",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
@@ -31,7 +32,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
+      "plugin:vue/essential",
       "eslint:recommended"
     ],
     "parserOptions": {
