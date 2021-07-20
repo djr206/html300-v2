@@ -21,6 +21,7 @@ We will converting the previous jQuery form to a Vue one using Vue CLI.
 -	Start with the completed activity code from lesson06
 - 	Install the Vue CLI if you haven't already with `npm install -g @vue/cli`
 	- 	If installed correctly, running `vue --version` should return a number
+
 -	To create your project using Vue CLI v2,
 	-	run `vue init webpack my-title`
 	-	Follow the prompts:
