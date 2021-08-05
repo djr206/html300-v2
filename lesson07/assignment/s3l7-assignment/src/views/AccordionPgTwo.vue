@@ -4,7 +4,7 @@
     <S3L7Header/>
       <br>
     <AccordionContentTwo v-for="(item, index) in dynamicList" :key="index" :user="item">
-      This is {{item.name}}, {{item.age}} years old
+      This is {{item.name}}, they're {{item.age}} years old
       <br>
     <img class="img-fluid p-3 my-3" :src="item.src" alt="" width="225px" height="150px">
       <br>

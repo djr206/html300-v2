@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- hide the top menu from view w v-show = false -->
+    <div id="nav" v-show='false'>
       <!-- to="/" default upon site load -->
       <router-link to="/">Sec3L7 Home</router-link> |
       <router-link to="/image-page">Images</router-link> |
@@ -10,8 +11,17 @@
     </div> 
     <router-view/>
   </div>
+
 </template>
 
+<script>
+// export default {
+//   prop: 
+//   data () {
+//     pageID = '';
+//   }
+// }
+</script>
 
 <style>
 #app {
