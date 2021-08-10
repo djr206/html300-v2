@@ -3,7 +3,6 @@ export default {
   name: 'post',
   props: ['post'],
 }
-
 </script>
 
 <template>
