@@ -2,7 +2,7 @@
   <!-- example code from https://medium.com/@olaysco/dynamic-list-toggling-in-vuejs-accordion-9020a5d91497 -->
   <div id="accordion-page2">
     <S3L7Header />
-    <br />
+    <br>
     <AccordionContentTwo
       v-for="(item, index) in dynamicList"
       :key="index"
@@ -22,6 +22,7 @@
         >Learn more about {{ item.name }} here if desired.</a
       >
     </AccordionContentTwo>
+    <br>
     <S3L7Footer />
   </div>
 </template>

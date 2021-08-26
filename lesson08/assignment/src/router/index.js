@@ -1,14 +1,20 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
     path: '/image-page',
@@ -18,53 +24,27 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "image-page" */ '../views/ImagePg.vue')
   },
+  // {
+  //   path: '/accordion-page',
+  //   name: 'AccordionPg',
+  //   component: () => import(/* webpackChunkName: "image-page" */ '../views/AccordionPg.vue')
+  // },
   {
-    path: '/accordion-page',
-    name: 'AccordionPg',
-    component: () => import(/* webpackChunkName: "image-page" */ '../views/AccordionPg.vue')
+    path: '/grid-page',
+    name: 'GridPg',
+    component: () => import(/* webpackChunkName: "image-page" */ '../views/GridPg.vue')
   },
   {
-  path: '/grid-page',
-  name: 'GridPg',
-  component: () => import(/* webpackChunkName: "image-page" */ '../views/GridPg.vue')
-},
-{
-  path: '/accordion-page2',
-  name: 'AccordionPgTwo',
-  component: () => import(/* webpackChunkName: "image-page" */ '../views/AccordionPgTwo.vue')
-},
-
-]
+    path: '/accordion-page2',
+    name: 'AccordionPgTwo',
+    component: () => import(/* webpackChunkName: "image-page" */ '../views/AccordionPgTwo.vue')
+  },  
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
-
-// following was created when I ran vue create assignment to merge existing folders src and public
-// import { createRouter, createWebHashHistory } from "vue-router";
-// import Home from "../views/Home.vue";
-
-// const routes = [
-//   {
-//     path: "/",
-//     name: "Home",
-//     component: Home,
-//   },
-//   {
-//     path: "/about",
-//     name: "About",
-//     component: () =>
-//       import(/* webpackChunkName: "about" */ "../views/About.vue"),
-//   },
-// ];
-
-// const router = createRouter({
-//   history: createWebHashHistory(),
-//   routes,
-// });
-
-// export default router;
+export default router;

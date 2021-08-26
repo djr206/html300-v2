@@ -1,10 +1,7 @@
 <template>
-  <!-- <div class="about"> -->
   <div class="image-pg">
     <S3L7Header />
-    <!-- <h1>why won't this work?</h1> -->
     <ImagesContent />
-
     <S3L7Footer />
   </div>
 </template>

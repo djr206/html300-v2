@@ -6,12 +6,12 @@
       <!-- getting following error when moving code from L7
        error  Unexpected mutation of "user" prop  vue/no-mutating-props 
        -->
-      <!-- <span
+      <span
         class="toggle float-right"
         @click="user.visible = !user.visible"
         v-text="toggletText[user.visible * 1]"
       >
-      </span> -->
+      </span>
     </div>
     <!-- insert array items into slot and make visible -->
     <div class="list-item-body p-8" v-show="user.visible">
@@ -24,7 +24,7 @@
 export default {
   props: ["user"],
   data() {
-    return { toggletText: ["show", "hide"] };
+    return { toggletText: ["Show", "Hide"] };
   },
 };
 </script>
