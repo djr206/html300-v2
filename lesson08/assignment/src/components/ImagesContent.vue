@@ -1,67 +1,43 @@
 <template>
   <div class="image-page">
     <div class="row text-center dog-iterate">
-      <!-- loops thru images array in script tag below -->
-      <div class="col-sm" v-for="image in images" :key="image.src">
-        <!-- apply state mods  -->
-        <!-- set class and initialize w/out bootstrap classes -->
-        <button :class="{ 'btnstyle': isShowing }"
-        @click="isShowing = !isShowing">
-          <img class="img-fluid p-3 my-3" :src="image.src" 
-          width="225px" height="150px" />
-        </button>
-<hr>        
-<!-- using bootstrap class btn -->
-        <button @click="isShowing = !isShowing" class="btn">
-          <img class="img-fluid p-3 my-3 btnstyle" :src="image.src" 
-          width="225px" height="150px" />
-        </button>
+<!-- loop thur array and render each item -->
+      <div class="col-sm" :key="image.id" v-for="image in images" >
+         <ImageContent :image="image" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { toggle } from "@/components/mixins/toggleBorder.js"
+import ImageContent from "@/components/ImageContent.vue"
 
 export default {
   name: "ImagesContent",
-  mixins: [toggle],
   props: {
-    imageURL: {String, required: true},
-    alt: {String, required: true},
-    title: String,
+    images: Array,
   },
-  data() {
-    return {
-      images: [
-        // { src: require("../../public/img/${filename}") }
-        { src: require("../../public/img/headshot1.jpg") },
-        { src: require("../../public/img/headshot2.jpg") },
-        { src: require("../../public/img/headshot3.jpg") },
-        { src: require("../../public/img/headshot4.jpg") },
-      ],
-      isShowing: false,
-    };
+  components: {
+    ImageContent,
   },
 };
 </script>
 
 
 <style scoped>
-.dog-iterate {
+/* .dog-iterate {
   margin-left: 6em;
   margin-right: 6em;
-}
+} */
 
 /* .image-page img {  
   border: red 2px solid;
 } */
 
-button {
+/* button {
   margin-bottom: 10px;
   cursor: pointer;
-}
+} */
 .btnstyle {
 	border: red 2px solid;
   }
